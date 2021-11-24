@@ -8,7 +8,7 @@ W ramach pytań prosimy o konsultowanie się z autorami zadań.
 tba by Kacper
 
 ## Zadanie 2 - Dynamiczna analiza kodu - teoria
-tba by Gabriel
+Utworzenie własnego narzędzia do dynamicznej analizy kodu.
 
 ## Zadanie 3 - Wykorzystanie narzędzi do analizy kodu.
 tba by Wojciech
