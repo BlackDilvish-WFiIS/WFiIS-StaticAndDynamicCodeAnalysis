@@ -42,5 +42,6 @@ c) Po próbie poprawienia naruszeń, proszę zastanowić się nad zasadnością 
 # ANALIZA DYNAMICZNA
 
 ## Przykład 1. Memcheck
+Proszę pobrać pliki z folderu memcheck. Znajduje się tam prosty przykład realizacji niektórych funkcjonalności listy jednokierunkowej. W pliku Node.c świadomie wprowadzono kilka wycieków pamięci. Proszę nie ingerując w plik main.c, korzystając z memchecka zlokalizować te błędy i wycieki i poprawić, aby poprawnie działały operacje dodawania do listy, czyszczenia pamięci przydzielonej dla jej elementów oraz wypisywania wszystkich elementów listy.
 ## Przykład 2. Callgrind
 ## Przykład 3. Gcovr
