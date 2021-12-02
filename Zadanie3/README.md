@@ -45,9 +45,9 @@ c) Po próbie poprawienia naruszeń, proszę zastanowić się nad zasadnością 
 Proszę pobrać pliki z folderu memcheck_example. Znajduje się tam prosty przykład realizacji niektórych funkcjonalności listy jednokierunkowej. W pliku Node.c świadomie wprowadzono kilka wycieków pamięci. Proszę nie ingerując w plik main.c, korzystając z memchecka zlokalizować te błędy i wycieki i poprawić, aby poprawnie działały operacje dodawania do listy, czyszczenia pamięci przydzielonej dla jej elementów oraz wypisywania wszystkich elementów listy.
 
 Pliki proszę kompilować z flagą -g dowolną techniką (z użyciem Makefile'a lub regexa) np.:
-'''
+```
 $ gcc -Wall -g *.c
-'''
+```
 
 ## Przykład 2. Callgrind
 W tym zadaniu proszę skorzystać z pliku main.c. Znajduje się tam implementacja algorytmów merge sort oraz bubble sort. W funkcji main następuje wywołanie tych algorytmów dla losowej tablicy 100 elementów.
@@ -57,15 +57,15 @@ a) Celem zadania jest prześledzenie raportu callgrinda dla poszczególnych funk
 Generowanie raportu:
 1. Proszę (koniecznie) skompilować program z flagą -g.
 2. Następnie proszę wygenerować raport:
-'''
+```
 $ valgrind --tool=callgrind ./a.out
-'''
+```
 
 Proszę zwrócić uwagę na numer procesu. Wygenerowany plik powinien zawierać go w nazwie, np. callgrind.out.214
 3. I wyświetlić raport w formie, którą można przeanalizować:
-'''
+```
 $ callgrind_annotate callgrind.out.PID --inclusive=yes --tree=both
-'''
+```
 
 Podpowiedź: wygodnej informacji najlepiej poszukiwać w górnej części outputu.
 
@@ -84,11 +84,11 @@ My zajmiemy się tym pierwszym przypadkiem.
 
 a) Proszę wygenerować w dowolnej formie raport z pokrycia dla pliku main.cpp.
 Przykładowo dla wygenerowania raportu w HTML-u:
-'''
+```
 $ g++ -Wall -g -fprofile-arcs -ftest-coverage -fPIC main.cpp
 $ ./a.out
 $ gcovr -r . --html --html-details -o nazwa_pliku.html
-'''
+```
 b) Proszę zwrócić uwagę na niepokryte branche i linie i dopisać w mainie wywołania funkcji tak by osiągnąć 100% w obu przypadkach.
 Czy sygnalizacja niepokrycia branchy w niektórych miejscach jest zaskoczeniem?
 
