@@ -42,6 +42,54 @@ c) Po próbie poprawienia naruszeń, proszę zastanowić się nad zasadnością 
 # ANALIZA DYNAMICZNA
 
 ## Przykład 1. Memcheck
-Proszę pobrać pliki z folderu memcheck. Znajduje się tam prosty przykład realizacji niektórych funkcjonalności listy jednokierunkowej. W pliku Node.c świadomie wprowadzono kilka wycieków pamięci. Proszę nie ingerując w plik main.c, korzystając z memchecka zlokalizować te błędy i wycieki i poprawić, aby poprawnie działały operacje dodawania do listy, czyszczenia pamięci przydzielonej dla jej elementów oraz wypisywania wszystkich elementów listy.
+Proszę pobrać pliki z folderu memcheck_example. Znajduje się tam prosty przykład realizacji niektórych funkcjonalności listy jednokierunkowej. W pliku Node.c świadomie wprowadzono kilka wycieków pamięci. Proszę nie ingerując w plik main.c, korzystając z memchecka zlokalizować te błędy i wycieki i poprawić, aby poprawnie działały operacje dodawania do listy, czyszczenia pamięci przydzielonej dla jej elementów oraz wypisywania wszystkich elementów listy.
+
+Pliki proszę kompilować z flagą -g dowolną techniką (z użyciem Makefile'a lub regexa) np.:
+'''
+$ gcc -Wall -g *.c
+'''
+
 ## Przykład 2. Callgrind
+W tym zadaniu proszę skorzystać z pliku main.c. Znajduje się tam implementacja algorytmów merge sort oraz bubble sort. W funkcji main następuje wywołanie tych algorytmów dla losowej tablicy 100 elementów.
+
+a) Celem zadania jest prześledzenie raportu callgrinda dla poszczególnych funkcji.
+
+Generowanie raportu:
+1. Proszę (koniecznie) skompilować program z flagą -g.
+2. Następnie proszę wygenerować raport:
+'''
+$ valgrind --tool=callgrind ./a.out
+'''
+
+Proszę zwrócić uwagę na numer procesu. Wygenerowany plik powinien zawierać go w nazwie, np. callgrind.out.214
+3. I wyświetlić raport w formie, którą można przeanalizować:
+'''
+$ callgrind_annotate callgrind.out.PID --inclusive=yes --tree=both
+'''
+
+Podpowiedź: wygodnej informacji najlepiej poszukiwać w górnej części outputu.
+
+Proszę zwrócić uwagę jak wiele instrukcji potrzebnych jest do wypisania tablicy!
+Proszę zwrócić uwagę na różnicę pomiędzy sortowaniem bąbelkowym a szybszymi algorytmami.
+
+b) Proszę spróbować napisać funkcję, która wywoływana dla trzech współczynników równania kwadratowego (A, B, C) postaci: Ax^2 + Bx + C, wypisze jego miejsca zerowe w formie: x1 = wartosc_1, x2 = wartosc_2, w taki sposób by po analizie callgrind uzyskać jak najmniej instrukcji. Niech program działa na liczbach zmiennoprzecinkowych.
+Program można napisać w C lub C++, ale proszę zwrócić uwagę np. na koszt różnych sposobów wypisywania wyników itp.
+
 ## Przykład 3. Gcovr
+Gcovr pozwala na zmierzenie pokrycia kodu:
+- w kontekście pokrycia linii w trakcia uruchomienia programu
+- w kontekście pokrycia kodu testami jednostkowymi
+
+My zajmiemy się tym pierwszym przypadkiem. 
+
+a) Proszę wygenerować w dowolnej formie raport z pokrycia dla pliku main.cpp.
+Przykładowo dla wygenerowania raportu w HTML-u:
+'''
+$ g++ -Wall -g -fprofile-arcs -ftest-coverage -fPIC main.cpp
+$ ./a.out
+$ gcovr -r . --html --html-details -o nazwa_pliku.html
+'''
+b) Proszę zwrócić uwagę na niepokryte branche i linie i dopisać w mainie wywołania funkcji tak by osiągnąć 100% w obu przypadkach.
+Czy sygnalizacja niepokrycia branchy w niektórych miejscach jest zaskoczeniem?
+
+Dziękujemy za uwagę :)
