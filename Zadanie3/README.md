@@ -49,6 +49,11 @@ Pliki proszę kompilować z flagą -g dowolną techniką (z użyciem Makefile'a 
 $ gcc -Wall -g *.c
 ```
 
+Do śledzenia wycieków można np. użyć komendy:
+```
+  $ valgrind --tool=memcheck --leak-check=full ./a.out
+```
+
 ## Przykład 2. Callgrind
 W tym zadaniu proszę skorzystać z pliku main.c. Znajduje się tam implementacja algorytmów merge sort oraz bubble sort. W funkcji main następuje wywołanie tych algorytmów dla losowej tablicy 100 elementów.
 
