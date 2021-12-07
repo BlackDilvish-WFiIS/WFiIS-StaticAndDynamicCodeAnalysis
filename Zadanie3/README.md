@@ -66,7 +66,7 @@ e) Proszę poprawić kod, aby usunąć warningi generowane w raporcie.
 # ANALIZA DYNAMICZNA
 
 ## Przykład 1. Memcheck
-Proszę pobrać pliki z folderu memcheck_example. Znajduje się tam prosty przykład realizacji niektórych funkcjonalności listy jednokierunkowej. W pliku Node.c świadomie wprowadzono kilka wycieków pamięci. Proszę nie ingerując w plik main.c, korzystając z memchecka zlokalizować te błędy i wycieki i poprawić, aby poprawnie działały operacje dodawania do listy, czyszczenia pamięci przydzielonej dla jej elementów oraz wypisywania wszystkich elementów listy.
+Proszę wykorzystać pliki z folderu memcheck. Znajduje się tam prosty przykład realizacji niektórych funkcjonalności listy jednokierunkowej. W pliku Node.c świadomie wprowadzono kilka wycieków pamięci. Proszę nie ingerując w plik main.c, korzystając z memchecka zlokalizować te błędy i wycieki i poprawić, aby poprawnie działały operacje dodawania do listy, czyszczenia pamięci przydzielonej dla jej elementów oraz wypisywania wszystkich elementów listy.
 
 Pliki proszę kompilować z flagą -g dowolną techniką (z użyciem Makefile'a lub regexa) np.:
 ```
@@ -79,7 +79,7 @@ Do śledzenia wycieków można np. użyć komendy:
 ```
 
 ## Przykład 2. Callgrind
-W tym zadaniu proszę skorzystać z pliku main.c. Znajduje się tam implementacja algorytmów merge sort oraz bubble sort. W funkcji main następuje wywołanie tych algorytmów dla losowej tablicy 100 elementów.
+W tym zadaniu proszę skorzystać z pliku callgrind/main.c. Znajduje się tam implementacja algorytmów merge sort oraz bubble sort. W funkcji main następuje wywołanie tych algorytmów dla losowej tablicy 100 elementów.
 
 a) Celem zadania jest prześledzenie raportu callgrinda dla poszczególnych funkcji.
 
@@ -125,7 +125,7 @@ export gcovr=~/.local/bin/gcovr
 
 Teraz pod komendą
 ```
-$gcovr --help
+$ gcovr --help
 ```
 powinien być widoczny program.
 

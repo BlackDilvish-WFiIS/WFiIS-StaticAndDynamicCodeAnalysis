@@ -17,3 +17,5 @@ Przeprowadzenie analizy:
 - Alokowanej pamięci
 - Funkcji wywołanych pośrednio przez bibliotekę standardową
 - Pokrycia kodu
+
+Życzymy powodzenia :)
