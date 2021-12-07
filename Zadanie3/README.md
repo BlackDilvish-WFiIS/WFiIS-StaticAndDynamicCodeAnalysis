@@ -54,7 +54,13 @@ UWAGA!!! Raport wskaże jedynie numery reguł MISR-y które zostały naruszone. 
 
 b) Proszę spróbować bazując na własnym doświadczeniu, poprzednim zadaniu, kodzie skryptów .py i ogólnych kompetencjach wywnioskować, w jaki sposób można poprawić w kodzie zaistniałe naruszenia reguł i czego mogą dotyczyć nie znając ich dokładnej treści.\
 
-c) Po próbie poprawienia naruszeń, proszę zastanowić się nad zasadnością stosowania tych reguł biorąc pod uwagę zarówno programowania aplikacji o zastosowaniu ogólnym, jak i tych przeznaczonych na systemy wbudowane.
+c) Po próbie poprawienia naruszeń, proszę zastanowić się nad zasadnością stosowania tych reguł biorąc pod uwagę zarówno programowanie aplikacji o zastosowaniu ogólnym, jak i tych przeznaczonych na systemy wbudowane.
+
+d) Proszę wygenerować podobny raport dla standardu CERT C++:
+```
+$ cppcheck --dump main.cpp
+$ python cert.py main.cpp.dump
+```
 
 # ANALIZA DYNAMICZNA
 
