@@ -93,20 +93,15 @@ Jeżeli gcovr nie jest dostępny na Taurusie to proszę pobrać go w następują
 $ pip install gcovr
 ```
 
-Wyświetli się ostrzeżenie ze ścieżką do pliku wykonywalnego gcovr. Należy posługiwać się tą ścieżką lub dodać w swoim katalogu domowym gcovra do pliku .bashrc:
+Wyświetli się ostrzeżenie ze ścieżką do pliku wykonywalnego gcovr. Należy posługiwać się tą ścieżką lub dodać w swoim katalogu domowym zmienną:
 
 ```
-export gcovr=/sciezka/do/gcovra
-```
-
-Następnie proszę zaplikać plik .bashrc i wykonać:
-```
-$ source .bashrc
+export gcovr=~/.local/bin/gcovr
 ```
 
 Teraz pod komendą
 ```
-$gcovr
+$gcovr --help
 ```
 powinien być widoczny program.
 
