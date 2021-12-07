@@ -30,5 +30,5 @@ Program powinien sprawdzić:
 
 4. Zadanie dodatkowe - rozwinąć poprzednie zadanie o sprecyzowanie lini, w której znajduje się niezamknięty nawias. 
 
-Zadanie można zrealizować w dowolnym języku. \
+Zadanie można zrealizować w dowolnym języku.  \
 Strona do sprawdzania wyrażeń reguralnych https://regex101.com/

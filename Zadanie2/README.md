@@ -32,5 +32,5 @@ Narzędzie powinno generować raport z:
 4. Stanu zmiennych lokalnych w momencie opuszczenia funkcji
 5. Zadanie dodatkowe - zmierzyć czas wykonania funkcji 
 
-Zadanie można zrealizować w dowolnym języku.
+Zadanie można zrealizować w dowolnym języku. \
 Strona do sprawdzania wyrażeń reguralnych https://regex101.com/
