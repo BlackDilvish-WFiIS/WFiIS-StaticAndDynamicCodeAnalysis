@@ -1,5 +1,22 @@
 # ANALIZA STATYCZNA NA PRZYKŁADZIE NARZĘDZIA cppcheck.
 
+## Instalacja cppcheck
+Jeśli narzędzie cppcheck nie jest dostępne na serwerze, należy pobrać repozytorium https://github.com/danmar/cppcheck i wykonać kroki kompilacji dla narzędzia cmake:
+```
+$ git clone https://github.com/danmar/cppcheck
+$ cd cppcheck
+$ mkdir build
+$ cd build
+$ cmake ..
+$ cmake --build .
+```
+Zbudowany plik binarny powinien być dostępny pod ścieżką <cppcheck_path>/build/bin/cppcheck.
+Można zapisać go np w zmiennej:
+```
+$ export cppcheck=~/<cppcheck_path>/build/bin/cppcheck
+```
+Następnie odwołując się do zmiennej $cppcheck lub pełnej ścieżki można wykonać kolejne zadania.
+
 ## Przykład 1.
 Proszę, korzystając z poradnika: https://linux.die.net/man/1/cppcheck oraz następującej konstrukcji:
 ```
