@@ -87,12 +87,35 @@ Gcovr pozwala na zmierzenie pokrycia kodu:
 
 My zajmiemy się tym pierwszym przypadkiem. 
 
+Jeżeli gcovr nie jest dostępny na Taurusie to proszę pobrać go w następujący sposób:
+
+```
+$ pip install gcovr
+```
+
+Wyświetli się ostrzeżenie ze ścieżką do pliku wykonywalnego gcovr. Należy posługiwać się tą ścieżką lub dodać w swoim katalogu domowym gcovra do ścieżki .bashrc:
+
+```
+export gcovr=/sciezka/do/gcovra
+```
+
+Następnie proszę zaplikać plik .bashrc i wykonać:
+```
+$ source .bashrc
+```
+
+Teraz pod komendą
+```
+$gcovr
+```
+powinien być widoczny program.
+
 a) Proszę wygenerować w dowolnej formie raport z pokrycia dla pliku main.cpp.
 Przykładowo dla wygenerowania raportu w HTML-u:
 ```
 $ g++ -Wall -g -fprofile-arcs -ftest-coverage -fPIC main.cpp
 $ ./a.out
-$ gcovr -r . --html --html-details -o nazwa_pliku.html
+$ $gcovr -r . --html --html-details -o nazwa_pliku.html
 ```
 b) Proszę zwrócić uwagę na niepokryte branche i linie i dopisać w mainie wywołania funkcji tak by osiągnąć 100% w obu przypadkach.
 Czy sygnalizacja niepokrycia branchy w niektórych miejscach jest zaskoczeniem?
