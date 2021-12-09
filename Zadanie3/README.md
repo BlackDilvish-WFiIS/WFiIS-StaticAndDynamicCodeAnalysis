@@ -37,7 +37,7 @@ $cppcheck --enable=all --xml main.cpp
 
 e) Wracając do kwestii pojawiających się błędów dotyczących dołączeń biblioteki. Istnieje możliwość ignorowania wybranych naruszeń. Opcja ta w praktyce powinna być stosowana rzecz jasna z odpowiednią ostrożnością. Proszę spróbować zignorować mylące w naszym przypadku ostrzeżenie dotyczące includów poprzez:
 ```
-$cppcheck --enable=all --suppress=missingIncludeSystem
+$cppcheck --enable=all --suppress=missingIncludeSystem main.cpp
 ```
 
 ## Przykład 2.
